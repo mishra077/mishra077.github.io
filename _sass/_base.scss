@@ -373,7 +373,11 @@ ul.task-list input[type="checkbox"] {
   text-align: center;
 
   .contact-icons {
-    font-size: 4rem;
+    font-size: 3rem;
+    position: fixed;
+    left: 0;
+    bottom: 1em;
+    width: 100%;
 
     a {
       i::before {
