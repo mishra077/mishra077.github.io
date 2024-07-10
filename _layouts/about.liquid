@@ -11,7 +11,17 @@ layout: default
         {{ site.title }}
       {% endif %}
     </h1>
-    <p class="desc">{{ page.subtitle }}</p>
+    <p class="desc">{{ page.subtitle }}
+      {% if page.cv_pdf %}
+        <a
+          href="{{ page.cv_pdf | prepend: 'assets/pdf/' | relative_url}}"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="float-right"
+          >[Resume]
+        </a>
+      {% endif %}
+    </p>
   </header>
 
   <article>
@@ -33,7 +43,9 @@ layout: default
           %}
         {% endif %}
         {% if page.profile.more_info %}
-          <div class="more-info">{{ page.profile.more_info }}</div>
+          <div class="more-info">
+            {{ page.profile.more_info }}
+          </div>
         {% endif %}
       </div>
     {% endif %}

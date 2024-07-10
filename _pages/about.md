@@ -1,8 +1,9 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
 subtitle: Deep Learning Researcher, Bellevue, WA
+cv_pdf: Resume.pdf
 
 profile:
   align: left

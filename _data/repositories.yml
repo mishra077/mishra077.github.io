@@ -1,14 +1,11 @@
 github_users:
-  - torvalds
-  - alshedivat
+  - mishra077
 
 repo_description_lines_max: 2
 
 github_repos:
-  - alshedivat/al-folio
-  - jekyll/jekyll
-  - twbs/bootstrap
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - mathjax/MathJax
-  - jpswalsh/academicons
+  - mishra077/GPT-2
+  - mishra077/Stable-Diffusion
+  - mishra077/MLOPS_Tutorial
+  - mishra077/RayTracingUnity
+  - mishra077/Optimizing_-Path-Tracing-Rendering-System-Using-CUDA
