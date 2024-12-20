@@ -33,17 +33,25 @@ layout: default
           %}
         {% endif %}
         {% if page.profile.more_info %}
-          <div class="more-info">{{ page.profile.more_info }}</div>
+          {% if page.profile.cv_pdf %}
+            {% assign profile_cv_path = page.profile.cv_pdf | prepend: 'assets/pdf/' %}
+            <div class="more_info">
+              <i class="fab fa-wpforms"></i>
+              <a href={{profile_cv_path}} target="_blank" title=page.profile.more_info>{{ page.profile.more_info }}</a>
+            </div>
+          {% else %}
+            <div class="more-info">{{ page.profile.more_info }}</div>
+          {% endif %}
         {% endif %}
       </div>
     {% endif %}
 
-    <div class="clearfix">{{ content }}</div>
-
+    <div class="clearfix" style="text-align:justify">{{ content }}</div>
+    <div style="margin-bottom:50px"></div>
     <!-- News -->
     {% if page.news and site.announcements.enabled %}
       <h2>
-        <a href="{{ '/news/' | relative_url }}" style="color: inherit">news</a>
+        <a href="{{ '/news/' | relative_url }}" style="color: inherit">News</a>
       </h2>
       {% include news.liquid limit=true %}
     {% endif %}
@@ -55,11 +63,11 @@ layout: default
       </h2>
       {% include latest_posts.liquid %}
     {% endif %}
-
+    <div style="margin-bottom:50px"></div>
     <!-- Selected papers -->
     {% if page.selected_papers %}
       <h2>
-        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">selected publications</a>
+        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">Publications</a>
       </h2>
       {% include selected_papers.liquid %}
     {% endif %}

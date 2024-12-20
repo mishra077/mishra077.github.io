@@ -2,17 +2,18 @@
 layout: about
 title: About
 permalink: /
-subtitle: Deep Learning Researcher, Delhi, Ind
-# cv_pdf: Abhishek_Mishra_Resume.pdf
+subtitle: Deep Learning Researcher, Delhi, India
+
 
 profile:
-  align: left
-  image: prof_pic.jpg
+  align: right
+  image: profile-pic2.png
   image_circular: false # crops the image to make it circular
-  more_info: # To be added in the future
+  more_info: Resume/CV # To be added in the future
+  cv_pdf: Abhishek_Mishra_Resume.pdf
 
-news: false # includes a list of news items
-selected_papers: false # includes a list of papers marked as "selected={true}"
+news: true # includes a list of news items
+selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
@@ -23,16 +24,18 @@ I'm a Researcher at [RespAI Lab, KIITs](https://respailab.github.io/) working on
 I graduated with my Master's in Computer Science from [Viterbi School of Engineering, University of Southern California](https://www.cs.usc.edu/) and B. Tech in Computer and Communication Engineering from [Manipal University Jaipur](https://jaipur.manipal.edu/foe/department-of-computer-communicarion-engineering.php).
 
 **Research Interests**: My primary research interests include Large Language Models, NLP Models, Vision Models. Currently research focus:
-- Diffusion Models
-- Multimodality
-- AI Agents
-- Unlearning
-- Responsible AI
+  - Diffusion Models
+  - Multimodality
+  - AI Agents
+  - Unlearning
+  - Responsible AI
 
 **Research Experience**:
-- Researcher at [**RespAI**](https://respailab.github.io/) Lab under [Prof. Murari Mandal](https://murarimandal.github.io/)
-- Deep Learning Research Intern at **[AiBEE Inc]**(https://www.aibee.com/) under [Jinghao Shi](https://www.linkedin.com/in/jinghao-shi/)
-- Research Intern at **iLab**, USC under [Prof. Laurent Itti](http://ilab.usc.edu/itti/)
-- Research Intern at **[Vision Intelligence Lab, MNIT]**(https://visionintelligence.github.io/)
+- Researcher at [**RespAI**](https://respailab.github.io/) Lab under [**Prof. Murari Mandal**](https://murarimandal.github.io/)
+- Deep Learning Research Intern at [**AiBEE Inc**](https://www.aibee.com/) under [**Jinghao Shi**](https://www.linkedin.com/in/jinghao-shi/)
+- Research Intern at **iLab**, USC under [**Prof. Laurent Itti**](http://ilab.usc.edu/itti/)
+- Research Intern at [**Vision Intelligence Lab, MNIT**](https://visionintelligence.github.io/)
 
 Feel free to reach out if you'd like to discuss AI, machine learning, or potential collaborations!
+
+<span style="color:red">I am seeking a Ph.D. position starting in 2025. I would appreciate the opportunity to discuss potential openings/collaborations.</span>
