@@ -38,5 +38,3 @@ I graduated with my Master's in Computer Science from [Viterbi School of Enginee
 - Research Intern at **[Vision Intelligence Lab, MNIT]**(https://visionintelligence.github.io/)
 
 Feel free to reach out if you'd like to discuss AI, machine learning, or potential collaborations!
-
-<span  style="color:red">I am seeking a Ph.D. position starting in 2025. I would appreciate the opportunity to discuss potential openings/collaborations.</span>.
