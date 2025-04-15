@@ -1,10 +1,10 @@
-// ---
-// # Only the main Sass file needs front matter (the dashes are enough)
-// ---
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
 @charset "utf-8";
 
 // Dimensions
-$max-content-width: {{ site.max_width }};
+$max-content-width: {{$site.max_width}};
 
 @import
   "variables",
@@ -25,10 +25,3 @@ $max-content-width: {{ site.max_width }};
   "custom"
 ;
 
-// Custom styles
-.visitor-counter {
-  margin-top: 10px;
-  text-align: center;
-  font-size: 0.9rem;
-  color: var(--global-text-color-light);
-}
