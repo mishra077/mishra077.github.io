@@ -11,6 +11,10 @@
       {% if site.last_updated %}
         Last updated: {{ 'now' | date: '%B %d, %Y' }}.
       {% endif %}
+      <div style="margin-top: 10px; text-align: center; font-size: 0.9rem;">
+        <span>Visitors: </span>
+        <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url={{ site.url | url_encode }}&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=visits&edge_flat=false" alt="Visitor Counter">
+      </div>
     </div>
   </footer>
 {% else %}
@@ -30,6 +34,10 @@
       {% if site.last_updated %}
         Last updated: {{ 'now' | date: '%B %d, %Y' }}.
       {% endif %}
+      <div style="margin-top: 10px; text-align: center; font-size: 0.9rem;">
+        <span>Visitors: </span>
+        <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url={{ site.url | url_encode }}&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=visits&edge_flat=false" alt="Visitor Counter">
+      </div>
     </div>
   </footer>
 {% endif %}
