@@ -116,25 +116,19 @@
   margin-bottom: 0.5rem;
   
   .btn {
-    display: none;
-  }
-}
-
-// External sources styling
-.external-source {
-  border-left: 4px solid var(--global-theme-color);
-  padding-left: 15px;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  
-  .source-name {
-    font-weight: 600;
+    display: inline-block;
+    margin-right: 0.5rem;
+    padding: 0.25rem 0.5rem;
     color: var(--global-theme-color);
-    margin-bottom: 5px;
-  }
-  
-  .post-date {
+    border: 1px solid var(--global-theme-color);
+    border-radius: 4px;
     font-size: 0.8rem;
-    color: var(--global-text-color-light);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    
+    &:hover {
+      background-color: var(--global-theme-color);
+      color: var(--global-bg-color);
+      text-decoration: none;
+    }
   }
 } 

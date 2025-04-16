@@ -73,6 +73,18 @@ layout: default
     </div>
   </article>
 
+  <div class="links">
+    {% if page.arxiv %}
+    <a href="http://arxiv.org/abs/{{ page.arxiv }}" class="btn btn-sm z-depth-0" role="button">arXiv</a>
+    {% endif %}
+    {% if page.code %}
+    <a href="{{ page.code }}" class="btn btn-sm z-depth-0" role="button">Code</a>
+    {% endif %}
+    {% if page.website %}
+    <a href="{{ page.website }}" class="btn btn-sm z-depth-0" role="button">Website</a>
+    {% endif %}
+  </div>
+
   {% if page.citation %}
     {% include citation.liquid %}
   {% endif %}
