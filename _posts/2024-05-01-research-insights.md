@@ -6,6 +6,7 @@ description: An exploration of the mathematical foundations behind dynamic infer
 author: Abhishek Mishra
 arxiv: 2503.16171
 code: https://github.com/mishra077/guardians-of-generation
+image: /assets/img/12.jpg
 ---
 
 # Research Insights: Copyright Protection in AI Image Generation
