@@ -2,7 +2,7 @@
 layout: page
 permalink: /blog/
 title: Blog
-description: Thoughts, ideas, and explorations.
+description: Research insights and technical explorations.
 nav: true
 nav_order: 3
 ---
@@ -10,14 +10,24 @@ nav_order: 3
 <div class="publications">
   {% for post in site.posts %}
     <div class="publication">
-      <div class="publication-title">
+      <div class="title">
         <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
       </div>
-      <div class="publication-authors">
+      <div class="author">
         {{ post.date | date: "%B %-d, %Y" }}
+        {% if post.author %}• {{ post.author }}{% endif %}
       </div>
-      <div class="publication-info">
+      <div class="periodical">
         {{ post.description }}
+      </div>
+      <div class="links">
+        <a href="{{ post.url | relative_url }}" class="btn btn-sm z-depth-0" role="button">Read</a>
+        {% if post.arxiv %}
+          <a href="http://arxiv.org/abs/{{ post.arxiv }}" class="btn btn-sm z-depth-0" role="button">arXiv</a>
+        {% endif %}
+        {% if post.code %}
+          <a href="{{ post.code }}" class="btn btn-sm z-depth-0" role="button">Code</a>
+        {% endif %}
       </div>
     </div>
   {% endfor %}
