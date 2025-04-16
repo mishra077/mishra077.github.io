@@ -86,8 +86,8 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: al-folio # blog_name will be displayed in your blog page
-blog_description: a simple whitespace theme for academics
+blog_name: Abhishek's Blog # blog_name will be displayed in your blog page
+blog_description: Thoughts, research insights, and technical explorations.
 permalink: /blog/:year/:title/
 lsi: false # produce an index for related posts
 
@@ -96,7 +96,7 @@ pagination:
   enabled: true
 
 related_blog_posts:
-  enabled: false
+  enabled: true
   max_related: 5
 
 # Giscus comments (RECOMMENDED)
@@ -151,6 +151,9 @@ collections:
   projects:
     output: true
     permalink: /:collection/:title/
+  posts:
+    output: true
+    permalink: /blog/:year/:title/
 
 announcements:
   enabled: true
@@ -171,6 +174,7 @@ markdown: kramdown
 highlighter: rouge
 kramdown:
   input: GFM
+  math_engine: mathjax
   syntax_highlighter_opts:
     css_class: "highlight"
     span:
