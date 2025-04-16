@@ -53,13 +53,13 @@ nav_order: 3
         <div class="col-sm-3">
           <div class="image-container">
             {% if source.name == "medium.com" %}
-            <img src="/assets/img/external/medium-logo.png" class="img-fluid" alt="Medium Logo">
+            <img src="{{ '/assets/img/external/medium-logo.svg' | relative_url }}" class="img-fluid" alt="Medium Logo">
             {% elsif source.name == "Google Blog" %}
-            <img src="/assets/img/external/google-blog-logo.png" class="img-fluid" alt="Google Blog Logo">
+            <img src="{{ '/assets/img/external/google-blog-logo.svg' | relative_url }}" class="img-fluid" alt="Google Blog Logo">
             {% elsif source.name == "Substack" %}
-            <img src="/assets/img/external/substack-logo.png" class="img-fluid" alt="Substack Logo">
+            <img src="{{ '/assets/img/external/substack-logo.svg' | relative_url }}" class="img-fluid" alt="Substack Logo">
             {% else %}
-            <img src="/assets/img/external/external-source.png" class="img-fluid" alt="External Source">
+            <img src="{{ '/assets/img/external/external-source.svg' | relative_url }}" class="img-fluid" alt="External Source">
             {% endif %}
           </div>
         </div>
@@ -93,9 +93,18 @@ nav_order: 3
 </div>
 
 <script>
-  // Create directory for external source images if it doesn't exist
+  // Check if SVG images are supported, if not fall back to PNG
   document.addEventListener('DOMContentLoaded', function() {
-    // This is just a placeholder - the actual directory creation would happen server-side
-    console.log('Checking for external source images');
+    var testImg = document.createElement('img');
+    testImg.setAttribute('src', 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjwvc3ZnPg==');
+    
+    // If SVG not supported, replace with PNG versions
+    testImg.onerror = function() {
+      var images = document.querySelectorAll('.image-container img[src*=".svg"]');
+      images.forEach(function(img) {
+        var src = img.getAttribute('src');
+        img.setAttribute('src', src.replace('.svg', '.png').replace('/external/', '/external/png/'));
+      });
+    };
   });
 </script>
