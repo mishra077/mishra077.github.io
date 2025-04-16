@@ -44,4 +44,58 @@ nav_order: 3
     </div>
   </div>
   {% endfor %}
+  
+  {% if site.external_sources %}
+  <h2 class="mt-4">External Articles</h2>
+  {% for source in site.external_sources %}
+    <div class="publication">
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="image-container">
+            {% if source.name == "medium.com" %}
+            <img src="/assets/img/external/medium-logo.png" class="img-fluid" alt="Medium Logo">
+            {% elsif source.name == "Google Blog" %}
+            <img src="/assets/img/external/google-blog-logo.png" class="img-fluid" alt="Google Blog Logo">
+            {% elsif source.name == "Substack" %}
+            <img src="/assets/img/external/substack-logo.png" class="img-fluid" alt="Substack Logo">
+            {% else %}
+            <img src="/assets/img/external/external-source.png" class="img-fluid" alt="External Source">
+            {% endif %}
+          </div>
+        </div>
+        <div class="col-sm-9">
+          <div class="source-name">{{ source.name }}</div>
+          {% if source.rss_url %}
+          <div class="periodical">
+            Articles available via <a href="{{ source.rss_url }}" target="_blank">RSS Feed</a>
+          </div>
+          {% endif %}
+          
+          {% if source.posts %}
+            {% for post in source.posts %}
+            <div class="external-source">
+              <div class="title">
+                <a href="{{ post.url }}" target="_blank">{{ post.url | split: '/' | last | replace: '-', ' ' | capitalize }}</a>
+              </div>
+              {% if post.published_date %}
+              <div class="post-date">
+                Published: {{ post.published_date | date: "%B %-d, %Y" }}
+              </div>
+              {% endif %}
+            </div>
+            {% endfor %}
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+  {% endif %}
 </div>
+
+<script>
+  // Create directory for external source images if it doesn't exist
+  document.addEventListener('DOMContentLoaded', function() {
+    // This is just a placeholder - the actual directory creation would happen server-side
+    console.log('Checking for external source images');
+  });
+</script>
